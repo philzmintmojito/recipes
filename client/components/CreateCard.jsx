@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import "../Update.css";
+
 
 
 // Custom hook for handling input boxes
@@ -48,12 +50,6 @@ const CreateCard = props => {
         body: JSON.stringify(body)
       })
         .then(resp => resp.json())
-        .then(data => {
-          console.log(data);
-        })
-        .then(() => {
-          props.history.push('/');
-        })
         .catch(err => console.log('CreateCard for recipe fetch /api/recipe: ERROR: ', err));
     }
     navigate('/');
@@ -73,7 +69,7 @@ const CreateCard = props => {
           </button>
         </Link>
       </header>
-      <article className="card createRecipe">
+      <article className="formRecipe">
         <h3>Enter your recipe details</h3>
         <div className="createRecipeFields">
           <label htmlFor="title">Recipe Name: </label>
@@ -81,19 +77,19 @@ const CreateCard = props => {
           {titleError ? (<span className="errorMsg">{titleError}</span>) : null}
         </div>
         <div className="createRecipeFields">
-          <label htmlFor="ingredient">Ingredient: </label>
-          <input name="ingredient" placeholder="" value={ingredient} onChange={ingredientOnChange} />
+          <label htmlFor="ingredient">Ingredients: </label>
+          <textarea name="ingredient" placeholder="" value={ingredient} onChange={ingredientOnChange} />
         </div>
         <div className="createRecipeFields">
-          <label htmlFor="instruction">Cooking Insturction: </label>
-          <input name="instruction" value={instruction} onChange={instructionOnChange} />
+          <label htmlFor="instruction">Cooking Instructions: </label>
+          <textarea name="instruction" value={instruction} onChange={instructionOnChange} />
         </div>
         <div className="createRecipeFields">
           <label htmlFor="imageURL">Photo URL: </label>
           <input name="imageURL" placeholder="" value={imageURL} onChange={imageURLOnChange} />
         </div>
 
-        <div className="createRecipeButtonContainer">
+        <div className="buttonContainer">
           <Link to="/" className="backLink">
             <button type="button" className="btnSecondary" onClick={() =>navigate('/')}>
               Cancel

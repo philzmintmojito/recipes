@@ -1,0 +1,38 @@
+.formRecipe {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+}
+.updateRecipeFields, .createRecipeFields {
+    margin: 0.5rem;
+    display: flex;
+    flex-direction: column;
+
+}
+label {
+    font-weight: bold;
+    font-style: oblique;
+    color: rgb(5, 58, 127);
+}
+h2, h3 {
+    color: #155263;
+}
+.buttonContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+button {
+    margin-right: 1rem;
+}
+textarea {
+    font-size: 10px;
+    width: 200px;
+    height: 70px;
+}
+input {
+    width: 200px;
+    font-size: 10px;
+}

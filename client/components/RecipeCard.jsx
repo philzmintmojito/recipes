@@ -17,8 +17,15 @@ const RecipeCard = ({
         <div className="recipe_container">
             <img src={imageURL} alt={title} className="recipe-img" />
             <h1 className="recipe-title">{title}</h1>
-            <p className="recipe-description">Ingredient: {ingredient} </p>
-            <p className="recipe-description">Instruction: {instruction}</p>
+            <div>
+                <p className='label'>Ingredients:  </p>
+                <p name='ingredients' className="recipe-description">{ingredient} </p>
+            </div>
+            <div>
+                <p className='label'>Instructions: </p>
+                <p className="recipe-description">{instruction}</p>
+            </div>
+
             <div className='button_container'>
                 <Link to={'/update'} state={{id, title, ingredient, instruction, imageURL}}>
                     <button type="button" className="btnUPDATE"> Update </button>

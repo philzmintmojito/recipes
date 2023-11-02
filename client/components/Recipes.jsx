@@ -78,9 +78,9 @@ class Recipes extends Component {
           <Link to={'/create'}>
             <button
               type="button"
-              className="btnSecondary"
+              className="btnNew"
             >
-              Create Recipes
+              New Recipe
             </button>
           </Link>
         </header>

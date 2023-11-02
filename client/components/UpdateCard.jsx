@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
+import "../Update.css";
+
 
 // Custom hook for handling input boxes
 // saves us from creating onChange handlers for them individually
@@ -40,12 +42,6 @@ const UpdateCard = props => {
         },
         body: JSON.stringify(body)
       })
-        .then(data => {
-          console.log(data);
-        })
-        .then(() => {
-          props.history.push('/');
-        })
         .catch(err => console.log('Update recipe fetch /api/recipe: ERROR: ', err));
     }
     navigate('/');
@@ -65,7 +61,7 @@ const UpdateCard = props => {
           </button>
         </Link>
       </header>
-      <article className="card updateRecipe">
+      <article className="formRecipe">
         <h3>Enter your recipe details</h3>
         <div className="updateRecipeFields">
           <label htmlFor="title">Recipe Name: </label>
@@ -73,19 +69,19 @@ const UpdateCard = props => {
           {titleError ? (<span className="errorMsg">{titleError}</span>) : null}
         </div>
         <div className="updateRecipeFields">
-          <label htmlFor="ingredient">Ingredient: </label>
-          <input name="ingredient" placeholder={ingredient} value={ingredient} onChange={ingredientOnChange} />
+          <label htmlFor="ingredient">Ingredients: </label>
+          <textarea name="ingredient" placeholder={ingredient} value={ingredient} onChange={ingredientOnChange} />
         </div>
         <div className="updateRecipeFields">
-          <label htmlFor="instruction">Cooking Insturction: </label>
-          <input name="instruction" placeholder={instruction} value={instruction} onChange={instructionOnChange} />
+          <label htmlFor="instruction">Cooking Instructions: </label>
+          <textarea name="instruction" placeholder={instruction} value={instruction} onChange={instructionOnChange} />
         </div>
         <div className="updateRecipeFields">
           <label htmlFor="imageURL">Photo URL: </label>
           <input name="imageURL" placeholder={imageURL} value={imageURL} onChange={imageURLOnChange} />
         </div>
 
-        <div className="updateRecipeButtonContainer">
+        <div className="buttonContainer">
           <Link to="/" className="backLink">
             <button type="button" className="btnSecondary" onClick={() => navigate('/')}>
               Cancel
