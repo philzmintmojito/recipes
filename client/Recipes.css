@@ -1,0 +1,9 @@
+.recipeCollection {
+
+    display: flex;
+    flex-direction: row;
+
+}
+h2 {
+    color:#4b0082;
+}
