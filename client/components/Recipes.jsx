@@ -12,6 +12,7 @@ class Recipes extends Component {
       recipes: [],
     };
   }
+
   deleteCard = (id) => {
     fetch(`/api/recipe/${id}`, {
         method: 'DELETE',
@@ -28,6 +29,7 @@ class Recipes extends Component {
     }
     this.setState({...this.state,recipes: newRecipes})
   }
+
   componentDidMount() {
     fetch('/api/')
       .then(res => res.json())
@@ -74,7 +76,7 @@ class Recipes extends Component {
     return (
       <section className="mainSection">
         <header className="pageHeader">
-          <h2>Recipes</h2>
+          <h2 className='webHeading'>Recipes</h2>
           <Link to={'/create'}>
             <button
               type="button"

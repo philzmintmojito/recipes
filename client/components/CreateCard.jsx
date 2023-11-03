@@ -62,9 +62,9 @@ const CreateCard = props => {
   return (
     <section className="mainSection createRecipeContainer">
       <header className="pageHeader">
-        <h2>Recipe Creator</h2>
+        <h2>New Recipe</h2>
         <Link to="/" className="backLink">
-          <button type="button" className="btnSecondary">
+          <button type="button" className="btnBack">
               Back to all recipes
           </button>
         </Link>

@@ -54,7 +54,7 @@ const UpdateCard = props => {
   return (
     <section className="mainSection updateRecipeContainer">
       <header className="pageHeader">
-        <h2>Recipe Updator</h2>
+        <h2>Update Recipe</h2>
         <Link to="/" className="backLink">
           <button type="button" className="btnSecondary">
               Back to all recipes
@@ -62,7 +62,7 @@ const UpdateCard = props => {
         </Link>
       </header>
       <article className="formRecipe">
-        <h3>Enter your recipe details</h3>
+        <h3>Update your recipe details</h3>
         <div className="updateRecipeFields">
           <label htmlFor="title">Recipe Name: </label>
           <input name="title" placeholder={title} value={title} onChange={titleOnChange} />

@@ -14,9 +14,13 @@ label {
     font-weight: bold;
     font-style: oblique;
     color: rgb(5, 58, 127);
+    font-size: 12px;
+    font-weight: bold;
 }
-h2, h3 {
+h3 {
     color: #155263;
+    margin-bottom: 10px;
+    font-size: 15px;
 }
 .buttonContainer {
     display: flex;
@@ -26,7 +30,26 @@ h2, h3 {
 
 button {
     margin-right: 1rem;
+    color: black;
+    background-color: #f7d378;
+    border-color: #1941f3;
+    width: auto;
+    margin: 0.8rem;
+    border-radius: 0.3rem;
+    padding:3px 10px 3px 10px;
+    font-weight: lighter;
+    border-radius: 10px;
+    font-size: 8px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
+button:hover {
+    background-color:#3569f7;
+    transition: 0.7s;
+    font-weight: bold;
+    color: #ffd700;
+}
+
 textarea {
     font-size: 10px;
     width: 200px;
@@ -35,4 +58,9 @@ textarea {
 input {
     width: 200px;
     font-size: 10px;
+}
+
+h2 {
+    color: #083363;
+    margin-bottom: 0.3rem;
 }

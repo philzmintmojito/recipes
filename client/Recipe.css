@@ -35,17 +35,31 @@ body {
 }
 
  .btnDELETE, .btnUPDATE {
-    color: #0078d0;
-    background-color: #eeeeee;
-    border-color: #eeeeee;
-    width: 66px;
+    color: black;
+    background-color: #f7d378;
+    border-color: #f69a44;
+    width: 7em;
     margin: 0.8rem;
     border-radius: 0.3rem;
-    padding: auto;
+    padding:3px 10px 3px 10px;
     font-weight: lighter;
+    border-radius: 10px;
+    font-size: 8px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
 }
-.btnDELETE {
-    color: rgb(247, 78, 78);
+
+.btnUPDATE:hover {
+    background-color:#3569f7;
+    transition: 0.7s;
+    font-weight: bold;
+    color: #ffd700;
+}
+.btnDELETE:hover {
+    background-color:rgb(245, 85, 85);
+    transition: 0.7s;
+    font-weight: bold;
+    color: #ffd700;
 }
 .button_container{
     display: flex;
@@ -53,7 +67,7 @@ body {
     align-items: flex-end;
 }
 .label {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     font-weight: bold;
     margin-left: 5%;
     margin-bottom: 0;
